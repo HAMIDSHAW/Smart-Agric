@@ -1,0 +1,38 @@
+services:
+  - type: web
+    name: smartagri-backend
+    runtime: python
+    region: oregon
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn "app:create_app()" --bind 0.0.0.0:$PORT --workers 1 --threads 2 --timeout 120
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false
+      - key: SECRET_KEY
+        generateValue: true
+      - key: JWT_SECRET_KEY
+        generateValue: true
+      - key: GROQ_API_KEY
+        sync: false
+      - key: OPENWEATHER_API_KEY
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: HUGGINGFACE_API_TOKEN
+        sync: false
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: SEED_ROLE_USERS
+        value: "false"
+      - key: SEED_USERS_PASSWORD
+        sync: false
+      - key: SEED_USERS_DOMAIN
+        sync: false
+      - key: FRONTEND_URL
+        sync: false

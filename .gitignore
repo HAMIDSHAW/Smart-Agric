@@ -1,0 +1,17 @@
+# Secrets - never commit
+.env
+*.env
+!.env.example
+!*.env.example
+# Private farmer photographs
+backend/uploads/*
+!backend/uploads/.gitkeep
+backend/.seeded
+# Python / Node
+__pycache__/
+*.pyc
+venv/
+env/
+node_modules/
+frontend/dist/
+.vscode/

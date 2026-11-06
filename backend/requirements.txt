@@ -1,0 +1,15 @@
+flask==3.0.3
+flask-cors==4.0.1
+flask-sqlalchemy==3.1.1
+flask-jwt-extended==4.6.0
+flask-migrate==4.0.7
+pg8000==1.31.2
+python-dotenv==1.0.1
+requests==2.32.3
+gunicorn==22.0.0
+bcrypt==4.2.1
+flask-bcrypt==1.0.1
+sqlalchemy==2.0.36
+alembic==1.13.2
+python-dateutil==2.9.0
+Pillow>=10.4,<12
